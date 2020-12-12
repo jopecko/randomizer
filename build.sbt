@@ -11,6 +11,10 @@ ThisBuild / githubWorkflowBuild := Seq(
   )
 )
 
+ThisBuild / githubWorkflowPublishTargetBranches := Seq(
+  RefPredicate.Equals(Ref.Branch("main"))
+)
+
 // Set to false or remove if you want to show stubs as linking errors
 nativeLinkStubs := true
 
